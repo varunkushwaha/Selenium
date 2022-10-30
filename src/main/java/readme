@@ -1,0 +1,16 @@
+ 1. Download the selenium standalone server jar 
+ 2. Navigate to  the location and run below command using cmd
+       Command = java -jar selenium-server-standalone-3.8.1.jar -role hub 
+       (It will create a selenium hub and give the url where it is register)
+        Example - http://192.168.86.1:4444/grid/register/
+ 3. Hit - http://192.168.86.1:4444 to the browser to check hub is up and running or not
+ 4. Open new command promt and navigate to the satndalone jar location and run the below command
+ 
+java -Dwebdriver.chrome.driver="C:\Users\arund\Desktop\Practice Jenkins\chromedriver_win32\chromedriver.exe" -jar selenium-server-standalone-3.8.1.jar -role node -hub http://192.168.86.1:4444/grid/register
+
+5. location should be the chrome driver.exe location in above commad
+6. Hub url should be the url which we got from previous command 
+7. It will register the node for the hub
+8. Hit the hub url to check node is register or not
+9. Follow the ChromeGridTest for further action
+
